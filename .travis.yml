@@ -27,7 +27,7 @@ script:
   - docker tag reverseproxy ebubecode/reverseproxy
 after_success:
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
-  - docker push ebubecode/udagram-api-feed:v1
-  - docker push ebubecode/udagram-api-user:v1
-  - docker push ebubecode/udagram-frontend:v1
-  - docker push ebubecode/reverseproxy:v1
+  - docker push ebubecode/udagram-api-feed:latest
+  - docker push ebubecode/udagram-api-user:latest
+  - docker push ebubecode/udagram-frontend:latest
+  - docker push ebubecode/reverseproxy:latest
